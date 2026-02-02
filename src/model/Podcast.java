@@ -1,6 +1,7 @@
 package model;
 
 public class Podcast extends Media {
+
     private int duration;
 
     public Podcast(int id, String name, int duration) {
@@ -8,11 +9,13 @@ public class Podcast extends Media {
         this.duration = duration;
     }
 
-    public String getType() {
-        return "PODCAST";
-    }
-
+    @Override
     public int getDuration() {
         return duration;
+    }
+
+    @Override
+    public String getType() {
+        return "PODCAST";
     }
 }
